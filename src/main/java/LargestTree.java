@@ -21,13 +21,13 @@ class LargestTree{
             int n = s.pop();
             for (int i = 0; i < adj[n].size(); i++) {
                 if (!visited.get(adj[n].get(i))) {
+                    size+=1;
                     visited.set(i, true);
                     for (int j = 0; j < adj[n].size(); j++) {
                         s.push(adj[n].get(j));
                     }
                 }
             }
-            size+=1;
         }
 
         return size;
